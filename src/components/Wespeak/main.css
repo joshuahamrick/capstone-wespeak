@@ -1,0 +1,67 @@
+body {
+    text-align: center;
+    font-family: 'Comfortaa', sans-serif;
+    background-color: rgba(0, 0, 0, 0.344);
+}
+
+#main-field {
+    margin-top: 29px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-weight: 700;
+}
+
+#speaking-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: pink;
+    border-radius: 4px;
+}
+
+#speaking-input {
+    padding: 5px;
+    margin: 8px;
+}
+
+#speaking-number-input {
+    padding: 5px;
+    margin: 8px;
+}
+
+#submit-speak {
+    width: 100px;
+    margin: 8px;
+}
+
+#spoken-input {
+    padding: 5px;
+    margin: 8px;
+}
+
+#spoken-number-input {
+    padding: 5px;
+    margin:8px;
+}
+
+#submit-spoke {
+    width: 100px;
+    margin: 8px;
+}
+
+#output {
+    padding: 5px;
+    margin: 70px;
+    font-size: 70px;
+}
+
+#spoken-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(80, 181, 117);
+    border-radius: 4px;
+}
