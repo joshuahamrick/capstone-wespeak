@@ -1,6 +1,11 @@
 import { Outlet, Route, Routes } from "react-router-dom";
 import { Home } from "../components/home/Home";
 import { Wespeak } from "../components/Wespeak/Wespeak";
+import { NavBar } from "../components/nav/NavBar";
+import { Explore } from "../components/explore/Explore";
+import { Likes } from "../components/likes/Likes";
+import { Profile } from "../components/profile/Profile";
+import { PostDetails } from "../components/posts/PostDetails";
 
 export const UserViews = () => {
   return (
@@ -9,12 +14,17 @@ export const UserViews = () => {
         path="/"
         element={
           <>
-            {/* <NavBar/> */}
+            <NavBar />
             <Outlet />
           </>
         }
       >
-        <Route index element={<Wespeak />} />
+        <Route index element={<Home />} />
+        <Route path="posts/:postId" element={<PostDetails />} />
+        <Route path="explore" element={<Explore />} />
+        <Route path="likes" element={<Likes />} />
+        <Route path="profile" element={<Profile />} />
+        <Route path="wespeak" element={<Wespeak />} />
       </Route>
     </Routes>
   );

@@ -1,0 +1,30 @@
+.posts-container {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.post {
+  height: 250px;
+  border: 2px solid black;
+  border-radius: 20px;
+  margin: 25px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-header {
+  margin: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.post-title {
+  font-size: 36px;
+  margin: 20px;
+}
+
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+}
