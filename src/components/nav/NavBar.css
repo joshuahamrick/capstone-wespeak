@@ -1,11 +1,22 @@
 .navbar {
   display: flex;
-  justify-content: space-around;
-  background-color: rgba(0, 0, 0, 0.337);
-  padding: 30px;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.156);
+  padding: 0;
   margin: 0;
 }
 
 .navbar-item {
   list-style: none;
+  padding: 30px 80px;
+}
+
+#wespeak {
+  background-color: pink;
+  flex-grow: grow;
+}
+
+#wespeak.active {
+  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.156);
 }
