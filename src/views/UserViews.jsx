@@ -6,6 +6,8 @@ import { Explore } from "../components/explore/Explore";
 import { Likes } from "../components/likes/Likes";
 import { Profile } from "../components/profile/Profile";
 import { PostDetails } from "../components/posts/PostDetails";
+import { GroupDetails } from "../components/group/GroupDetails";
+import { UserProfile } from "../components/users/UserProfile";
 
 export const UserViews = () => {
   return (
@@ -21,6 +23,9 @@ export const UserViews = () => {
       >
         <Route index element={<Home />} />
         <Route path="posts/:postId" element={<PostDetails />} />
+        <Route path="groups/:groupId" element={<GroupDetails />} />
+        <Route path="users/:userId" element={<UserProfile />} />
+
         <Route path="explore" element={<Explore />} />
         <Route path="likes" element={<Likes />} />
         <Route path="profile" element={<Profile />} />

@@ -9,3 +9,8 @@ export const getPostById = (postId) => {
     `http://localhost:8088/posts?_expand=user&_expand=group&id=${postId}`
   ).then((res) => res.json());
 };
+export const getUserPostsById = (userId) => {
+  return fetch(
+    `http://localhost:8088/posts?_expand=user&_expand=group&userId=${userId}`
+  ).then((res) => res.json());
+};

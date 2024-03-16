@@ -5,7 +5,7 @@ export const Post = ({ post }) => {
       <header className="card-header">
         <div>{post.group.name}</div>
         <div>
-          {post.user.userName} - {post.date}
+          {post.user.username} - {post.date}
         </div>
       </header>
       <div className="post-title">{post.title}</div>

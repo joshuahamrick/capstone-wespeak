@@ -16,7 +16,7 @@ export const PostDetails = () => {
         <div></div>
         <div className="back-button">
           <Link to="/">
-            <button className="back-button-actual-button">Back</button>
+            <button className="button">Back</button>
           </Link>
         </div>
         <div></div>
@@ -31,7 +31,7 @@ export const PostDetails = () => {
           <header className="card-header">
             <div>{post.group?.name}</div>
             <div>
-              {post.user?.userName} - {post.date ? post.date : ""}
+              {post.user?.username} - {post.date ? post.date : ""}
             </div>
           </header>
           <div className="post-title">{post.title ? post.title : ""}</div>
