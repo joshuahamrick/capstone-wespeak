@@ -1,0 +1,89 @@
+.explore-page-container {
+  margin: 0 auto;
+  width: 40%;
+}
+.explore-filter-container {
+  display: flex;
+  justify-content: space-between;
+  width: 130px;
+  margin: 0 223px 0 217px;
+}
+.bold {
+  font-weight: 800;
+}
+.group {
+  border-radius: 20px;
+  margin: 25px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(82, 81, 81, 0.111);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.124);
+}
+
+.group-name {
+  font-size: 29px;
+  margin: 20px;
+  padding: 30px 20px 10px 30px;
+}
+.group-members {
+  padding: 0px 0px 20px 0px;
+}
+
+.group-details-card {
+  width: 70%;
+  margin: auto;
+  margin-top: 45px;
+  background-color: rgba(82, 81, 81, 0.111);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.124);
+  border-radius: 20px;
+}
+.group-description {
+  font-size: 23px;
+  margin: 30px;
+}
+
+.user {
+  padding: 1px;
+  border-radius: 20px;
+  margin: 25px 60px;
+  background-color: rgba(82, 81, 81, 0.111);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.124);
+}
+
+.user-username {
+  font-size: 29px;
+  margin: 20px auto;
+  margin-top: 30px;
+  border-bottom: 2px rgba(0, 0, 0, 0.227) solid;
+  width: 75%;
+}
+
+.user-name {
+  font-size: 20px;
+  margin: 20px;
+}
+
+.user-location {
+  margin-bottom: 10px;
+}
+.user-profile-info {
+  border: 2px black solid;
+  width: 55%;
+  margin: 45px auto;
+  padding: 50px;
+}
+.user-profile-details {
+  margin: 10px;
+}
+
+.profiles-posts {
+  font-size: 24px;
+}
+
+.profile-posts-sizer {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
