@@ -34,6 +34,7 @@
   justify-content: space-between;
   background-color: rgba(82, 81, 81, 0.111);
   text-shadow: 1px 1px rgba(0, 0, 0, 0.124);
+  /* box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.167); */
 }
 
 .card-header {

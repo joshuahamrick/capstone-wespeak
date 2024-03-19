@@ -23,3 +23,15 @@ export const getUserById = (userId) => {
     res.json()
   );
 };
+
+export const updateUser = (userUpdate) => {
+  return fetch(`http://localhost:8088/users/${userUpdate.id}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(userUpdate),
+  });
+};
+
+export const deleteUserProfile = (userId) => {
+  return fetch(`http://localhost:8088/users/${userId}`, { method: "DELETE" });
+};

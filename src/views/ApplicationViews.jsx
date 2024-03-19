@@ -1,5 +1,18 @@
 import { useState, useEffect } from "react";
 import { UserViews } from "./UserViews";
+import { Outlet, Route, Routes } from "react-router-dom";
+import { NavBar } from "../components/nav/NavBar";
+import { Home } from "../components/home/Home";
+import { PostDetails } from "../components/posts/PostDetails";
+import { GroupDetails } from "../components/group/GroupDetails";
+import { UserProfile } from "../components/users/UserProfile";
+import { Explore } from "../components/explore/Explore";
+import { Likes } from "../components/likes/Likes";
+import { Profile } from "../components/profile/Profile";
+import { Wespeak } from "../components/Wespeak/Wespeak";
+import { EditProfile } from "../components/form/EditProfile";
+import { NewPost } from "../components/form/NewPost";
+import { EditPost } from "../components/form/EditPost";
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrrentUser] = useState({});
@@ -10,5 +23,39 @@ export const ApplicationViews = () => {
     setCurrrentUser(honeyUserObject);
   }, []);
 
-  return <UserViews />;
+  return (
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <>
+            <NavBar />
+            <Outlet />
+          </>
+        }
+      >
+        <Route index element={<Home />} />
+        <Route
+          path="posts/:postId"
+          element={<PostDetails currentUser={currentUser} />}
+        />
+        <Route
+          path="posts/edit/:postId"
+          element={<EditPost currentUser={currentUser} />}
+        />
+        <Route path="groups/:groupId" element={<GroupDetails />} />
+        <Route path="users/:userId" element={<UserProfile />} />
+
+        <Route path="explore" element={<Explore />} />
+        {/* <Route path="likes" element={<Likes />} /> */}
+        <Route path="newpost" element={<NewPost currentUser={currentUser} />} />
+        <Route path="profile" element={<Profile currentUser={currentUser} />} />
+        <Route path="wespeak" element={<Wespeak />} />
+        <Route
+          path="editprofile"
+          element={<EditProfile currentUser={currentUser} />}
+        />
+      </Route>
+    </Routes>
+  );
 };
