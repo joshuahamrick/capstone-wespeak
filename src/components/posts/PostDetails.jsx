@@ -1,15 +1,23 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import { getAllPosts, getPostById } from "../../services/postService";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import {
+  deleteUsersPost,
+  getAllPosts,
+  getPostById,
+} from "../../services/postService";
 
-export const PostDetails = () => {
+export const PostDetails = ({ currentUser }) => {
   const { postId } = useParams();
+  const navigate = useNavigate();
   const [post, setPost] = useState([]);
 
   useEffect(() => {
     getPostById(postId).then((post) => setPost(post[0]));
   }, [postId]);
-
+  const handleDeletion = () => {
+    deleteUsersPost(post);
+    navigate("/");
+  };
   return (
     <>
       <div className="back-bar">
@@ -26,6 +34,16 @@ export const PostDetails = () => {
         <div></div>
         <div></div>
       </div>
+      {currentUser.id == post.userId ? (
+        <>
+          <Link to={`/posts/edit/${post.id}`}>
+            <button>Edit</button>
+          </Link>
+          <button onClick={handleDeletion}>Delete</button>
+        </>
+      ) : (
+        ""
+      )}
       <div className="post-details-container">
         <div className="post">
           <header className="card-header">

@@ -1,14 +1,17 @@
-export const ExploreFilterBar = ({ setShowGroups }) => {
-  const handleChange = () => {
-    setShowGroups((prevGroupState) => !prevGroupState);
+export const ExploreFilterBar = ({ setShowGroups, setSearchTerm }) => {
+  const handleChangeGroup = () => {
+    setShowGroups(true);
+  };
+  const handleChangeUser = () => {
+    setShowGroups(false);
   };
   return (
     <>
       <div className="explore-filter-container">
-        <button className="button" onClick={handleChange}>
+        <button className="button" onClick={handleChangeGroup}>
           Groups
         </button>
-        <button className="button" onClick={handleChange}>
+        <button className="button" onClick={handleChangeUser}>
           Users
         </button>
       </div>
