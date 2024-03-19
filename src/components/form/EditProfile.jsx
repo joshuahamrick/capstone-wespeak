@@ -97,7 +97,7 @@ export const EditProfile = ({ currentUser }) => {
         </fieldset>
         <fieldset>
           <div className="form-group">
-            <button className="form-btn" onClick={handleSave}>
+            <button className="button" onClick={handleSave}>
               Save
             </button>
           </div>
@@ -105,7 +105,7 @@ export const EditProfile = ({ currentUser }) => {
       </form>
       <div className="form-group">
         <button
-          className="form-btn"
+          className="button"
           onClick={() => {
             deleteUserProfile(currentUser.id);
             localStorage.removeItem("honey_user");

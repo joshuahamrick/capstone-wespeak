@@ -34,7 +34,7 @@
   justify-content: space-between;
   background-color: rgba(82, 81, 81, 0.111);
   text-shadow: 1px 1px rgba(0, 0, 0, 0.124);
-  /* box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.167); */
+  box-shadow: 1px 2px 5px rgba(48, 46, 46, 0.235);
 }
 
 .card-header {
@@ -66,9 +66,19 @@
   margin-bottom: -300px;
   margin-right: 500px;
 }
+.post-details-btn-container {
+  display: flex;
+  flex-direction: column;
+  height: 70px;
+  margin-top: 47px;
+  margin-bottom: -300px;
+  margin-left: 500px;
+}
 .button {
   padding: 5px 10px;
   border-style: none;
   border-radius: 4px;
   background-color: rgba(82, 81, 81, 0.156);
+  margin: auto;
+  box-shadow: 1px 1px 1px rgba(48, 46, 46, 0.235);
 }

@@ -88,7 +88,9 @@ export const NewPost = ({ currentUser }) => {
           </select>
         </fieldset>
         <fieldset>
-          <button onClick={handleSave}>Submit</button>
+          <button onClick={handleSave} className="button">
+            Submit
+          </button>
         </fieldset>
       </form>
     </>

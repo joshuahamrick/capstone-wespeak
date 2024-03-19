@@ -1,3 +1,16 @@
+.btn-container {
+  margin: auto;
+  margin-bottom: -81px;
+  margin-top: -20px;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80px;
+  width: 60%;
+  align-items: flex-end;
+}
+
 .profile-info {
   border: 2px black solid;
   width: 75%;

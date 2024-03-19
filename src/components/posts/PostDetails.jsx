@@ -30,20 +30,24 @@ export const PostDetails = ({ currentUser }) => {
         <div></div>
         <div></div>
         <div></div>
+        {currentUser.id == post.userId ? (
+          <>
+            <div className="post-details-btn-container">
+              <Link to={`/posts/edit/${post.id}`}>
+                <button className="button">Edit</button>
+              </Link>
+              <button className="button" onClick={handleDeletion}>
+                Delete
+              </button>
+            </div>
+          </>
+        ) : (
+          ""
+        )}
         <div></div>
         <div></div>
         <div></div>
       </div>
-      {currentUser.id == post.userId ? (
-        <>
-          <Link to={`/posts/edit/${post.id}`}>
-            <button>Edit</button>
-          </Link>
-          <button onClick={handleDeletion}>Delete</button>
-        </>
-      ) : (
-        ""
-      )}
       <div className="post-details-container">
         <div className="post">
           <header className="card-header">

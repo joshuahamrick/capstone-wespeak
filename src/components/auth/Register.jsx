@@ -9,6 +9,12 @@ export const Register = (props) => {
     fullName: "",
     isStaff: false,
   });
+  // name
+  // username
+  // bio
+  // location
+  // contact
+
   let navigate = useNavigate();
 
   const registerNewUser = () => {
@@ -49,7 +55,7 @@ export const Register = (props) => {
   return (
     <main style={{ textAlign: "center" }}>
       <form className="form-login" onSubmit={handleRegister}>
-        <h1>Honey Rae Repairs</h1>
+        <h1>Wespeak</h1>
         <h2>Please Register</h2>
         <fieldset>
           <div className="form-group">
@@ -79,7 +85,7 @@ export const Register = (props) => {
 
         <fieldset>
           <div className="form-group">
-            <button className="login-btn btn-info" type="submit">
+            <button className="button" type="submit">
               Register
             </button>
           </div>
