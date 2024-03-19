@@ -26,25 +26,23 @@ export const Profile = ({ currentUser }) => {
   return (
     <>
       <h1>Profile</h1>
-      <div>
+      <div className="btn-container">
         {localStorage.getItem("honey_user") ? (
-          <li className="navbar-item navbar-logout">
-            <Link
-              className="navbar-link"
-              to=""
-              onClick={() => {
-                localStorage.removeItem("honey_user");
-                navigate("/", { replace: true });
-              }}
-            >
-              <button>Logout</button>
-            </Link>
-          </li>
+          <Link
+            className="navbar-link"
+            to=""
+            onClick={() => {
+              localStorage.removeItem("honey_user");
+              navigate("/", { replace: true });
+            }}
+          >
+            <button className="button">Logout</button>
+          </Link>
         ) : (
           ""
         )}
         <Link to="/editprofile">
-          <button>Edit</button>
+          <button className="button">Edit</button>
         </Link>
       </div>
       <div className="user-profile-info">

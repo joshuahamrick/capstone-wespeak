@@ -53,8 +53,11 @@ body {
 
 #output {
   padding: 5px;
-  margin: 70px;
+  margin: 70px auto;
   font-size: 70px;
+  width: 75%;
+  text-wrap: wrap;
+  overflow-wrap: break-word;
 }
 
 #spoken-field {
