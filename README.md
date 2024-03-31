@@ -38,7 +38,7 @@ In your browser type in the following URL, unless otherwise specified by your te
 - Navigate to Wespeak
 - Paste in desired ciphered text to the spoken tab
 - Enter the cipher key into the number field
-- 
+
 ### When seeking to cipher plain text to prepare to post you may do the following
 - Enter desired plain text into the speak field
 - Enter desired cipher key(use a groups key if posting to a group)
