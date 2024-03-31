@@ -33,12 +33,13 @@ In the source folder of this repository run the following command
 In your browser type in the following URL, unless otherwise specified by your terminal
 >[http://localhost:5173/](http://localhost:5173/)
 ## How to Use
-When seeking to decipher posts you can access each groups cipher key followed by the # in the bottom right side of each post!
+### When seeking to decipher posts you can access each groups cipher key followed by the # in the bottom right side of each post!
 - Click on desired text and make note of the cipher key
 - Navigate to Wespeak
 - Paste in desired ciphered text to the spoken tab
 - Enter the cipher key into the number field
-When seeking to cipher plain text to prepare to post you may do the following
+- 
+### When seeking to cipher plain text to prepare to post you may do the following
 - Enter desired plain text into the speak field
 - Enter desired cipher key(use a groups key if posting to a group)
 - Click on Submit
