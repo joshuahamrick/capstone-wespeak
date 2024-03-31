@@ -24,10 +24,10 @@ You will need to have npm installed on your machine..
 ### Installation
 >npm install
 ### Database Initialization
-In the source folder of the database project run the following command
+In the source folder of the database project run the following command -
 >json-server database.json -p 8088
 ###Project Hosting
-In the source folder of this repository run the following command
+In the source folder of this repository run the following command -
 >npm run dev
 ### Open the App!
 In your browser type in the following URL, unless otherwise specified by your terminal
