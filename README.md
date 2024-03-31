@@ -50,4 +50,4 @@ The end goal of this project is to instead have a downloadable application that 
 ## WireFrame
 [Wespeak Project WireFrame](https://miro.com/app/board/uXjVNjUxfSU=/?share_link_id=618278056910)
 ## ERDiagram
-[Wespeak ERD]Wespeak Project WireFrame](https://dbdiagram.io/d/Wespeak-Capstone-65eb537ab1f3d4062c79bfea)
+[Wespeak ERD](https://dbdiagram.io/d/Wespeak-Capstone-65eb537ab1f3d4062c79bfea)
