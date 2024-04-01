@@ -2,7 +2,7 @@
 
 ## Problem Solved
 
-Wespeak is a rough draft of a social media platform where you can freely share information without outside censorship. 
+Wespeak is a rough draft of a social media platform where users can freely share information without outside censorship. 
 
 Achieving this by having any intended information remain encrypted while online, and decryption running offline on your local machine!
 
