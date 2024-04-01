@@ -6,14 +6,12 @@ import { createUser, getUserByEmail } from "../../services/userService.js";
 export const Register = (props) => {
   const [customer, setCustomer] = useState({
     email: "",
-    fullName: "",
-    isStaff: false,
+    name: "",
+    username: "",
+    bio: "",
+    location: "",
+    contact: "",
   });
-  // name
-  // username
-  // bio
-  // location
-  // contact
 
   let navigate = useNavigate();
 
@@ -62,11 +60,22 @@ export const Register = (props) => {
             <input
               onChange={updateCustomer}
               type="text"
-              id="fullName"
+              id="name"
               className="form-control"
               placeholder="Enter your name"
               required
-              autoFocus
+            />
+          </div>
+        </fieldset>
+        <fieldset>
+          <div className="form-group">
+            <input
+              onChange={updateCustomer}
+              type="text"
+              id="username"
+              className="form-control"
+              placeholder="Enter your user name"
+              required
             />
           </div>
         </fieldset>

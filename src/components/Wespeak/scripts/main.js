@@ -3,6 +3,7 @@ import { convertSpoken } from "./spoken.js";
 const submitSpeakButton = document.getElementById("submit-speak");
 const submitSpokeButton = document.getElementById("submit-spoke");
 const outputElement = document.getElementById("output");
+const copy = require("clipboard-copy");
 
 //Anything that we wanna do we can do with the right information
 
@@ -21,5 +22,5 @@ submitSpokeButton.addEventListener("click", () => {
   const spokenValue = document.getElementById("spoken-input").value;
   const spokenNumValue = document.getElementById("spoken-number-input").value;
   const convertedFromSpoken = convertSpoken(spokenValue, spokenNumValue);
-  outputElement.textContent = convertedFromSpoken;
+  outputElement.innerHTML = convertedFromSpoken;
 });

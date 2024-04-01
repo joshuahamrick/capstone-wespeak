@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { getAllGroups } from "../../services/groupsService";
 import { postNewPost } from "../../services/postService";
+import "./Form.css";
 export const NewPost = ({ currentUser }) => {
   const [groups, setGroups] = useState([]);
   const navigate = useNavigate();
@@ -40,8 +41,8 @@ export const NewPost = ({ currentUser }) => {
   };
   return (
     <>
-      <h1>New Post</h1>
-      <form>
+      <form className="form">
+        <h1>New Post</h1>
         <fieldset>
           <input
             name="title"
@@ -49,18 +50,33 @@ export const NewPost = ({ currentUser }) => {
             placeholder="Title"
             required
             onChange={handleChange}
-            className="form-control"
+            className="form-input"
           />
         </fieldset>
         <fieldset>
-          <input
+          <textarea
             name="body"
             type="text"
             placeholder="Body"
             required
             onChange={handleChange}
-            className="form-control"
-          />
+            id="form-big"
+            className="form-input"
+          ></textarea>
+        </fieldset>
+        <fieldset>
+          <select
+            name="groupId"
+            className="filter-option"
+            onChange={handleChange}
+          >
+            <option value="">Group</option>
+            {groups.map((group) => (
+              <option key={group.id} value={group.id}>
+                {group.name}
+              </option>
+            ))}
+          </select>
         </fieldset>
         <fieldset>
           <select
@@ -71,20 +87,6 @@ export const NewPost = ({ currentUser }) => {
             <option value="">Type</option>
             <option value="true">Encrypted</option>
             <option value="false">Non-Encrypted</option>
-          </select>
-        </fieldset>
-        <fieldset>
-          <select
-            name="groupId"
-            className="filter-option"
-            onChange={handleChange}
-          >
-            <option value="">Groups</option>
-            {groups.map((group) => (
-              <option key={group.id} value={group.id}>
-                {group.name}
-              </option>
-            ))}
           </select>
         </fieldset>
         <fieldset>

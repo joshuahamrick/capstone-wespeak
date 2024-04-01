@@ -2,14 +2,19 @@ import { useState, useEffect } from "react";
 import { getAllPosts } from "../../services/postService";
 import { PostList } from "../posts/postList.jsx";
 import { FilterBar } from "../filter/FilterBar.jsx";
+import { getUserGroups } from "../../services/userGroupsService.jsx";
 
-export const Home = () => {
+export const Home = ({ currentUser }) => {
   const [posts, setPosts] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredPosts, setFilteredPosts] = useState(posts);
   const [group, setGroup] = useState(0);
   const [type, setType] = useState("");
+  const [userGroups, setUserGroups] = useState([]);
 
+  useEffect(() => {
+    getUserGroups().then((userGroupsArr) => setUserGroups(userGroupsArr));
+  }, [currentUser]);
   useEffect(() => {
     if (group) {
       const filteredByGroup = posts.filter((post) => post.groupId == group);

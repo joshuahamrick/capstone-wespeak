@@ -60,7 +60,19 @@ export const Wespeak = () => {
           </button>
         </div>
       </div>
-      <p id="output">{display}</p>
+      <p
+        id="output"
+        onClick={(event) => {
+          try {
+            navigator.clipboard.writeText(event.target.innerHTML);
+          } catch (error) {
+            window.alert("copy error");
+          }
+        }}
+      >
+        {display}
+        {/* <div className="copy-btn"></div> */}
+      </p>
     </>
   );
 };

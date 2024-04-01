@@ -12,7 +12,7 @@ export const Post = ({ post }) => {
       <footer className="post-footer">
         <div></div>
         <div></div>
-        <div>Likes</div>
+        <div>#{post.group.num}</div>
       </footer>
     </div>
   );

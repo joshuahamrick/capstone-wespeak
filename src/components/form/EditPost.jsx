@@ -61,74 +61,66 @@ export const EditPost = ({ currentUser }) => {
         <div></div>
         <div></div>
       </div>
-      <div className="post-details-container">
-        <div className="post">
-          <header className="card-header">
-            <div>
-              {post.user?.username} - {post.date ? post.date : ""}
-            </div>
-          </header>
-          <form>
-            <fieldset>
-              <div className="form-group">
-                <input
-                  name="title"
-                  type="text"
-                  required
-                  value={post.title ? post.title : ""}
-                  onChange={handleChange}
-                  className="form-control"
-                />
-              </div>
-            </fieldset>
-            <fieldset>
-              <div className="form-group">
-                <input
-                  name="body"
-                  type="text"
-                  value={post.body ? post.body : ""}
-                  required
-                  onChange={handleChange}
-                  className="form-control"
-                />
-              </div>
-            </fieldset>
-            <fieldset>
-              <select
-                name="groupId"
-                className="filter-option"
-                onChange={handleChange}
-              >
-                <option value={post.groupId}>{post.group?.name}</option>
-                {groups.map((group) => (
-                  <option key={group.id} value={group.id}>
-                    {group.name}
-                  </option>
-                ))}
-              </select>
-            </fieldset>
-            <fieldset>
-              <select
-                name="encrypted"
-                className="filter-option"
-                onChange={handleChange}
-              >
-                <option value={post.encrypted}>{displayEncrypted()}</option>
-                <option value="true">Encrypted</option>
-                <option value="false">Non-Encrypted</option>
-              </select>
-            </fieldset>
-            <fieldset>
-              <button onClick={handleSave}>Save</button>
-            </fieldset>
-          </form>
-          <footer className="post-footer">
-            <div></div>
-            <div></div>
-            <div>Likes</div>
-          </footer>
-        </div>
-      </div>
+
+      <form>
+        <fieldset>
+          <div className="form-group">
+            <label>Title</label>
+            <input
+              name="title"
+              type="text"
+              required
+              value={post.title ? post.title : ""}
+              onChange={handleChange}
+              className="form-input"
+            />
+          </div>
+        </fieldset>
+        <fieldset>
+          <div className="form-group">
+            <label>Body</label>
+            <textarea
+              name="body"
+              type="text"
+              value={post.body ? post.body : ""}
+              required
+              onChange={handleChange}
+              className="form-input"
+              id="form-big"
+            />
+          </div>
+        </fieldset>
+        <fieldset>
+          <select
+            name="groupId"
+            className="filter-option"
+            onChange={handleChange}
+          >
+            <option value={post.groupId}>{post.group?.name}</option>
+            {groups.map((group) => (
+              <option key={group.id} value={group.id}>
+                {group.name}
+              </option>
+            ))}
+          </select>
+        </fieldset>
+        <fieldset>
+          <select
+            name="encrypted"
+            className="filter-option"
+            onChange={handleChange}
+          >
+            <option value={post.encrypted}>{displayEncrypted()}</option>
+            <option value="true">Encrypted</option>
+            <option value="false">Non-Encrypted</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <button className="button" onClick={handleSave}>
+            Save
+          </button>
+        </fieldset>
+      </form>
     </>
   );
 };

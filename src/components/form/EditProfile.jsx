@@ -4,7 +4,7 @@ import {
   getUserById,
   updateUser,
 } from "../../services/userService";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const EditProfile = ({ currentUser }) => {
   const navigate = useNavigate();
@@ -28,8 +28,23 @@ export const EditProfile = ({ currentUser }) => {
   };
   return (
     <>
-      <h1>Edit Profile</h1>
+      <div className="back-bar">
+        <div></div>
+        <div className="back-button">
+          <Link to={`/profile`}>
+            <button className="button">Back</button>
+          </Link>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
       <form className="edit-profile">
+        <h1>Edit Profile</h1>
+
         <fieldset>
           <div className="form-group">
             <label>User Name: </label>
@@ -50,19 +65,6 @@ export const EditProfile = ({ currentUser }) => {
               type="text"
               name="name"
               value={currentUserObj?.username ? currentUserObj.username : ""}
-              required
-              onChange={handleChange}
-              className="form-control"
-            />
-          </div>
-        </fieldset>
-        <fieldset>
-          <div className="form-group">
-            <label>Bio: </label>
-            <input
-              name="bio"
-              type="text"
-              value={currentUserObj?.bio ? currentUserObj.bio : ""}
               required
               onChange={handleChange}
               className="form-control"
@@ -97,24 +99,41 @@ export const EditProfile = ({ currentUser }) => {
         </fieldset>
         <fieldset>
           <div className="form-group">
-            <button className="button" onClick={handleSave}>
-              Save
-            </button>
+            <label>Bio: </label>
+            <textarea
+              id="form-big"
+              name="bio"
+              type="text"
+              value={currentUserObj?.bio ? currentUserObj.bio : ""}
+              required
+              onChange={handleChange}
+              className="form-control"
+            />
+          </div>
+        </fieldset>
+        <fieldset>
+          <div className="form-group">
+            <div className="flex-footer">
+              <div id="extra-space"></div>
+              <button className="button" onClick={handleSave}>
+                Save
+              </button>
+              <div className="form-group">
+                <button
+                  className="button"
+                  onClick={() => {
+                    deleteUserProfile(currentUser.id);
+                    localStorage.removeItem("honey_user");
+                    navigate("/", { replace: true });
+                  }}
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
           </div>
         </fieldset>
       </form>
-      <div className="form-group">
-        <button
-          className="button"
-          onClick={() => {
-            deleteUserProfile(currentUser.id);
-            localStorage.removeItem("honey_user");
-            navigate("/", { replace: true });
-          }}
-        >
-          Delete
-        </button>
-      </div>
     </>
   );
 };
