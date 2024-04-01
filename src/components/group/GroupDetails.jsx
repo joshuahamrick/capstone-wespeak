@@ -27,7 +27,7 @@ export const GroupDetails = () => {
       <div className="group-details-card">
         <div className="group-name">{group.name}</div>
         <div className="group-description">{group.description}</div>
-        <div className="group-members"># members</div>
+        <div className="group-members">#{group.num}</div>
       </div>
     </>
   );
