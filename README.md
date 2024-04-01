@@ -21,7 +21,7 @@ Achieving this by having any intended information remain encrypted while online,
 ## Installation and Setup
 
 Clone down this repository as well as the database repository linked above.
-You will need to have npm installed on your machine..
+You will need to have npm installed on your machine.
 
 ### Installation
 >npm install
