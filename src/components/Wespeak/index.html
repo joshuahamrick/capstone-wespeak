@@ -27,7 +27,18 @@
         <button type="submit" id="submit-spoke">Submit</button>
       </div>
     </div>
-    <p id="output"></p>
+    <h1 onclick="copyClipboard(event)" id="output">Click Me</h1>
+    <script>
+      function copyClipboard(event) {
+        buttonClone = event.target.innerHTML;
+        try {
+          navigator.clipboard.writeText(buttonClone);
+          console.log("Content copied to clipboard");
+        } catch (err) {
+          console.error("Failed to copy: ", err);
+        }
+      }
+    </script>
     <script type="module" src="./scripts/main.js"></script>
   </body>
 </html>

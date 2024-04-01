@@ -45,12 +45,20 @@
 .post-title {
   font-size: 36px;
   margin: 20px;
+  overflow-wrap: break-word;
+}
+.post-title:hover {
+  cursor: pointer;
 }
 .post-body {
   margin-left: 150px;
   margin-right: 150px;
+  text-wrap: wrap;
+  overflow-wrap: break-word;
 }
-
+.post-body:hover {
+  cursor: pointer;
+}
 .post-footer {
   display: flex;
   justify-content: space-between;

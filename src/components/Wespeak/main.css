@@ -59,7 +59,9 @@ body {
   text-wrap: wrap;
   overflow-wrap: break-word;
 }
-
+#output:hover {
+  cursor: pointer;
+}
 #spoken-field {
   display: flex;
   flex-direction: column;
@@ -67,4 +69,11 @@ body {
   padding: 20px;
   background-color: rgb(80, 181, 117);
   border-radius: 4px;
+}
+
+.copy-btn {
+  border: 2px solid black;
+  padding: 3px;
+  width: 3px;
+  box-shadow: 3px 3px black;
 }

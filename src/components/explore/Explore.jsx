@@ -6,7 +6,7 @@ import { getAllGroups } from "../../services/groupsService";
 import { Link } from "react-router-dom";
 import { getAllUsers } from "../../services/userService";
 import { Users } from "../users/Users";
-export const Explore = () => {
+export const Explore = ({ currentUser }) => {
   const [groups, setGroups] = useState([]);
   const [users, setUsers] = useState([]);
   const [showGroups, setShowGroups] = useState(true);
@@ -67,7 +67,7 @@ export const Explore = () => {
           ))
         : filteredUsers.map((user) => (
             <Link to={`/users/${user.id}`} key={user.id}>
-              <Users user={user} key={user.id} />
+              <Users user={user} currentUser={currentUser} key={user.id} />
             </Link>
           ))}
     </div>

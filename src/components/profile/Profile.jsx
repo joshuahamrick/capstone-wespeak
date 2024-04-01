@@ -48,15 +48,27 @@ export const Profile = ({ currentUser }) => {
       <div className="user-profile-info">
         <div className="user-username">{currentUserObj?.username}</div>
         <div className="user-name">{currentUserObj?.name}</div>
-        <div className="user-profile-detailss">
-          <span className="bold">Bio: </span>
-          {currentUserObj?.bio}
-        </div>
-        <div className="user-profile-details">
-          <span className="bold">Lives in </span>
-          {currentUserObj?.location}
-        </div>
-        <div className="user-profile-details">{currentUserObj?.contact}</div>
+        {currentUserObj?.bio ? (
+          <div className="user-profile-detailss">
+            <span className="bold">Bio: </span>
+            {currentUserObj?.bio}
+          </div>
+        ) : (
+          ""
+        )}
+        {currentUserObj?.location ? (
+          <div className="user-profile-details">
+            <span className="bold">Lives in </span>
+            {currentUserObj?.location}
+          </div>
+        ) : (
+          ""
+        )}
+        {currentUserObj?.contact ? (
+          <div className="user-profile-details">{currentUserObj?.contact}</div>
+        ) : (
+          ""
+        )}
       </div>
       <div className="profiles-posts">Posts</div>
 

@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { UserViews } from "./UserViews";
 import { Outlet, Route, Routes } from "react-router-dom";
 import { NavBar } from "../components/nav/NavBar";
 import { Home } from "../components/home/Home";
@@ -7,7 +6,6 @@ import { PostDetails } from "../components/posts/PostDetails";
 import { GroupDetails } from "../components/group/GroupDetails";
 import { UserProfile } from "../components/users/UserProfile";
 import { Explore } from "../components/explore/Explore";
-import { Likes } from "../components/likes/Likes";
 import { Profile } from "../components/profile/Profile";
 import { Wespeak } from "../components/Wespeak/Wespeak";
 import { EditProfile } from "../components/form/EditProfile";
@@ -34,7 +32,7 @@ export const ApplicationViews = () => {
           </>
         }
       >
-        <Route index element={<Home />} />
+        <Route index element={<Home currentUser={currentUser} />} />
         <Route
           path="posts/:postId"
           element={<PostDetails currentUser={currentUser} />}
@@ -46,7 +44,7 @@ export const ApplicationViews = () => {
         <Route path="groups/:groupId" element={<GroupDetails />} />
         <Route path="users/:userId" element={<UserProfile />} />
 
-        <Route path="explore" element={<Explore />} />
+        <Route path="explore" element={<Explore currentUser={currentUser} />} />
         {/* <Route path="likes" element={<Likes />} /> */}
         <Route path="newpost" element={<NewPost currentUser={currentUser} />} />
         <Route path="profile" element={<Profile currentUser={currentUser} />} />
