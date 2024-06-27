@@ -51,7 +51,7 @@ In your browser type in the following URL, unless otherwise specified by your te
 
 ## Future Development
 In this rough draft version of Wespeak all ciphering and deciphering is still run online and not at all encrypted.
-The end goal of this project is to instead have a downloadable application that encrypts and decrypts any intended texts while running explicitly offline. This would create an enviroment where people may communicate without being concerned of outside influence, and no plain text would ever be displayed online. All encryption keys for groups and individual personal messages will be provided by offline and secure means. Only those intended to see your messages will. 
+The end goal of this project is to instead have a downloadable application that encrypts and decrypts any intended texts while running explicitly offline. This creates an enviroment where people may communicate without being concerned of outside influence, and no plain text would ever be displayed online. All encryption keys for groups and individual personal messages will be provided by offline and secure means. Only those intended to see your messages will. 
 ## WireFrame
 [Wespeak Project WireFrame](https://miro.com/app/board/uXjVNjUxfSU=/?share_link_id=618278056910)
 ## ERDiagram
