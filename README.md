@@ -8,7 +8,7 @@ Achieving this by having any intended information remain encrypted while online,
 
 ## Technologies Used
 
-- REACT
+- React
 - Javascript
 - JSON Server
 - HTML5
